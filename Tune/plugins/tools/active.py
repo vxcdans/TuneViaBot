@@ -42,7 +42,7 @@ async def active_voice_chats(_, message: Message):
         )
 
 
-@app.on_message(filters.command("vvc") & SUDOERS)
+@app.on_message(filters.command("avc") & SUDOERS)
 async def active_video_chats(_, message: Message):
     mystic = await message.reply_text("» ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛs ʟɪsᴛ...")
     text = await fetch_active_chats("video")
